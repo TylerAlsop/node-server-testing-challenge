@@ -1,8 +1,8 @@
 const express = require("express")
 const cors = require("cors")
 const boyNamesRouter = require("./routers/boyNamesRouter")
-const girlNamesRouter = require("./routers/girlNamesRouter")
-const genderNeutralNamesRouter = require("./routers/genderNeutralNamesRouter")
+// const girlNamesRouter = require("./routers/girlNamesRouter")
+// const genderNeutralNamesRouter = require("./routers/genderNeutralNamesRouter")
 
 
 const server = express()
@@ -12,14 +12,14 @@ server.use(cors())
 server.use(express.json())
 
 server.use("/boys", boyNamesRouter)
-server.use("/girls", girlNamesRouter)
-server.use("/gender-neutral", genderNeutralNamesRouter)
+// server.use("/girls", girlNamesRouter)
+// server.use("/gender-neutral", genderNeutralNamesRouter)
 
 
 
 server.get("/", (req, res) => {
 	res.json({
-		message: "Welcome to our API",
+		message: "Welcome to my API for baby names!",
 	})
 })
 
