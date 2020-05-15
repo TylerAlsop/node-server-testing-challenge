@@ -22,3 +22,25 @@ For this project you will use `Test Driven Development` to create a RESTful API 
 - use `jest` and `supertest` to write the tests.
 - Your API must be able to **create** and **delete** a _resource_ of your choosing.
 - Write a minimum of two tests per route handler.
+
+
+## Notes for installing dependencies:
+npm init -y
+npm install --save-dev nodemon
+npm install knex --save sqlite3
+npx knex init
+npm install express
+npm install helmet
+npx knex migrate:make initial
+npm install bcryptjs
+npm install express-session
+npm install cors
+npm install jsonwebtoken
+npm install -D dotenv
+****** Be sure and add .env to the gitignore ******
+npm install cookie-parser
+
+npm install --save-dev cross-env
+
+npx knex migrate:latest --env=testing
+npx knex seed:run --env=testing
