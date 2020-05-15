@@ -40,5 +40,7 @@ npm install -D dotenv
 ****** Be sure and add .env to the gitignore ******
 npm install cookie-parser
 
+npm install --save-dev cross-env
+
 npx knex migrate:latest --env=testing
 npx knex seed:run --env=testing

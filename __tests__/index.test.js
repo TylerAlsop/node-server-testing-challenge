@@ -20,6 +20,4 @@ test("GET /", async () => {
     //**** A more general way to test the welcome message would be like this: ****//
     expect(res.body.message).toMatch(/welcome/i)
 
-
-
 })
