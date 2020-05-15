@@ -10,7 +10,9 @@ async function update(id, data) {
 }
 
 function remove(id) {
-	return null
+    return db("boyNames")
+        .where({ id})
+        .del() 
 }
 
 function find() {

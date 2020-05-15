@@ -48,4 +48,14 @@ describe("boy names integration tests", () => {
 
     })
 
+    it("DELETE /boys", async () => {
+
+        const res = await supertest(server).delete("/boys/4")
+        const newBoysList = await supertest(server).get("/boys")
+
+        expect(res.statusCode).toBe(204)
+        expect(newBoysList.body).toHaveLength(3)
+
+    })
+
 })
